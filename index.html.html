@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0a0a">
+<title>Chamada do Projeto</title>
+<style>
+:root{box-sizing:border-box;--bg:#0a0a0a;--card:#161616;--line:#2a2a2a;--red:#e11d2e;--red2:#ff3b4a;--tx:#f5f5f5;--mut:#9a9a9a;--ok:#22c55e;--ju:#f59e0b;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:radial-gradient(900px 400px at 50% -100px,#3a0509,var(--bg));background-color:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:760px;margin:0 auto;padding:14px 14px 40px}
+h1{font-size:20px;margin:6px 0 12px;letter-spacing:.5px}h1 b{color:var(--red2)}
+.tabs{display:flex;gap:6px;background:var(--card);padding:5px;border-radius:14px;border:1px solid var(--line);margin-bottom:14px}
+.tabs button{flex:1;padding:11px 4px;border:0;border-radius:10px;background:none;color:var(--mut);font-weight:700;font-size:13px;cursor:pointer;transition:.2s}
+.tabs button.on{background:linear-gradient(135deg,var(--red),#8f0b17);color:#fff;box-shadow:0 4px 14px #e11d2e55}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sp{flex:1}
+.nav{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.nav button,.btn{background:#1f1f1f;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:10px 14px;font-size:15px;font-weight:600;cursor:pointer;transition:.15s}
+.nav button:active,.btn:active{transform:scale(.96)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.on{background:var(--red);border-color:var(--red2)}
+.btn.sm{padding:8px 10px;font-size:13px}
+input[type=date],input[type=month],input[type=text],input[type=password]{background:#0f0f0f;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:10px;font-size:16px;color-scheme:dark;min-width:0}
+input[type=text],input[type=password]{flex:1}
+.dt{text-align:center;flex:1}.dt small{display:block;color:var(--mut);text-transform:capitalize}.dt strong{font-size:18px}
+.lbl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;margin:0 0 8px}
+.st{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.st:first-child{border-top:0}
+.nm{flex:1;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.opts{display:flex;gap:6px}
+.o{width:46px;height:42px;border-radius:10px;border:1.5px solid var(--line);background:#101010;color:var(--mut);font-weight:800;cursor:pointer;transition:.15s;font-size:14px}
+.o:active{transform:scale(.92)}
+.o.P.on{background:var(--ok);border-color:var(--ok);color:#04210f}
+.o.F.on{background:var(--red);border-color:var(--red2);color:#fff}
+.o.J.on{background:var(--ju);border-color:var(--ju);color:#2b1a00}
+.nt{text-align:center;padding:26px 8px;color:var(--mut)}.nt b{color:var(--red2);display:block;font-size:18px;margin-bottom:6px}
+.leg{font-size:12px;color:var(--mut);margin-top:6px}
+.bar{height:8px;border-radius:6px;background:#222;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#8f0b17,var(--red2));transition:width .4s}
+.pct{font-size:22px;font-weight:800;color:var(--red2)}
+.nums{display:flex;gap:10px;font-size:13px;color:var(--mut);flex-wrap:wrap;margin-top:4px}
+.nums b{color:var(--tx)}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.g div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.g b{display:block;font-size:22px;color:var(--red2)}.g span{font-size:12px;color:var(--mut)}
+label.ck{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--mut)}
+label.ck input{accent-color:var(--red);width:18px;height:18px}
+.x{background:none;border:0;color:var(--mut);font-size:20px;cursor:pointer;padding:6px 10px}.x:hover{color:var(--red2)}
+.empty{color:var(--mut);text-align:center;padding:20px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px}.chips .btn{white-space:nowrap}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--red);color:#fff;padding:10px 16px;border-radius:12px;font-weight:600;opacity:0;transition:.3s;pointer-events:none;font-size:14px}
+.toast.s{opacity:1;transform:translate(-50%,0)}
+</style></head>
+<body><div class="wrap">
+<h1>📋 <b>CHAMADA</b> DO PROJETO</h1>
+<div class="tabs"><button data-t="c" class="on">Chamada</button><button data-t="r">Resumo</button><button data-t="a">Alunos</button><button data-t="t">Turmas</button><button data-t="d" style="display:none">Admin</button></div>
+<div id="v"></div>
+</div><div class="toast" id="to"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+// ====== CONFIGURE AQUI (Supabase > Project Settings > API) ======
+const SUPABASE_URL="https://loqynqvzadyipmizleyk.supabase.co";
+const SUPABASE_KEY="sb_publishable__jgojAshZYGo7G7UemAO7w_nBMnpplB";
+// ================================================================
+const KEY="chamada_v1";
+let S={students:[],rec:{},nt:{},noJ:false};
+try{const x=JSON.parse(localStorage.getItem(KEY)||"null");if(x)S=Object.assign(S,x)}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({noJ:S.noJ,turma:S.turma}))}catch(e){}};
+S.turmas=[];S.all=[];S.ntT={};S.err=null;S.turma=S.turma||null;S.students=[];S.rec={};S.nt={};S.admin=false;S.adm=null;
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const pd=s=>{const[a,b,c]=s.split("-").map(Number);return new Date(a,b-1,c)};
+const esc=s=>s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let pend=null,tab="c",day=iso(new Date()),mon=day.slice(0,7);
+const $=s=>document.querySelector(s);
+function toast(t){const e=$("#to");e.textContent=t;e.classList.add("s");setTimeout(()=>e.classList.remove("s"),1600)}
+function range(kind){const d=pd(day);let a,b;
+ if(kind==="d")a=b=d;
+ else if(kind==="w"){const w=(d.getDay()+6)%7;a=new Date(d.getFullYear(),d.getMonth(),d.getDate()-w);b=new Date(a.getFullYear(),a.getMonth(),a.getDate()+6)}
+ else{a=new Date(d.getFullYear(),d.getMonth(),1);b=new Date(d.getFullYear(),d.getMonth()+1,0)}
+ const out=[];for(let x=new Date(a);x<=b;x.setDate(x.getDate()+1))out.push(iso(x));return out}
+function toggleNT(kind){const ds=range(kind);const all=ds.every(x=>S.nt[x]);
+ ds.forEach(x=>{if(all)delete S.nt[x];else S.nt[x]=1});save();
+ toast(all?"Treino restaurado":"Marcado: sem treino ("+{d:"dia",w:"semana",m:"mês"}[kind]+")");render()}
+function setS(id,v){const r=S.rec[day]=S.rec[day]||{};if(r[id]===v)delete r[id];else r[id]=v;
+ if(!Object.keys(r).length)delete S.rec[day];save();render()}
+function allP(){const r=S.rec[day]=S.rec[day]||{};S.students.forEach(s=>r[s.id]="P");save();render()}
+function shift(n){const d=pd(day);d.setDate(d.getDate()+n);day=iso(d);render()}
+function vChamada(){
+ const d=pd(day),ds=d.toLocaleDateString("pt-BR",{weekday:"long"}),dl=d.toLocaleDateString("pt-BR",{day:"2-digit",month:"long",year:"numeric"});
+ const nt=S.nt[day],r=S.rec[day]||{};
+ let h=`<div class="card"><div class="nav"><button onclick="shift(-1)">‹</button><div class="dt"><small>${ds}</small><strong>${dl}</strong></div><button onclick="shift(1)">›</button></div>
+ <div class="row" style="margin-top:10px"><input type="date" value="${day}" onchange="day=this.value||day;render()"><button class="btn sm" onclick="day=iso(new Date());render()">Hoje</button></div></div>
+ <div class="card"><p class="lbl">Marcar “sem treino”</p><div class="row">
+ <button class="btn sm ${nt?"on":""}" onclick="toggleNT('d')">Dia</button>
+ <button class="btn sm ${range("w").every(x=>S.nt[x])?"on":""}" onclick="toggleNT('w')">Semana</button>
+ <button class="btn sm ${range("m").every(x=>S.nt[x])?"on":""}" onclick="toggleNT('m')">Mês</button></div>
+ <p class="leg">Toque de novo para desfazer. Semana = segunda a domingo.</p></div>`;
+ if(!S.students.length)h+=`<div class="card empty">Nenhum aluno ainda.<br><br><button class="btn red" onclick="tab='a';render()">Cadastrar alunos</button></div>`;
+ else if(nt)h+=`<div class="card nt"><b>🚫 Sem treino neste dia</b>Este dia não conta na frequência.</div>`;
+ else{h+=`<div class="card"><div class="row" style="margin-bottom:6px"><p class="lbl sp" style="margin:0">Alunos (${S.students.length})</p><button class="btn sm" onclick="allP()">Todos presentes</button></div>`;
+  S.students.forEach(s=>{h+=`<div class="st"><span class="nm">${esc(s.name)}</span><div class="opts">
+  <button class="o P ${r[s.id]==="P"?"on":""}" title="Presença" onclick="setS('${s.id}','P')">P</button>
+  <button class="o F ${r[s.id]==="F"?"on":""}" title="Falta" onclick="setS('${s.id}','F')">F</button>
+  <button class="o J ${r[s.id]==="J"?"on":""}" title="Falta justificada" onclick="setS('${s.id}','J')">FJ</button></div></div>`});
+  h+=`<p class="leg">P = presença · F = falta · FJ = falta justificada</p></div>`}
+ return h}
+function stats(m){const days=Object.keys(S.rec).filter(k=>k.startsWith(m)&&!S.nt[k]&&Object.keys(S.rec[k]).length);
+ const ntc=Object.keys(S.nt).filter(k=>k.startsWith(m)).length;
+ const rows=S.students.map(s=>{let p=0,f=0,j=0;days.forEach(k=>{const v=S.rec[k][s.id];if(v==="P")p++;else if(v==="F")f++;else if(v==="J")j++});
+  const den=p+f+(S.noJ?0:j);return{s,p,f,j,pc:den?Math.round(p/den*1000)/10:0,den}});
+ return{days:days.length,ntc,rows}}
+function vResumo(){
+ const st=stats(mon);const [y,mm]=mon.split("-").map(Number);
+ const nm=new Date(y,mm-1,1).toLocaleDateString("pt-BR",{month:"long",year:"numeric"});
+ let h=`<div class="card"><div class="nav"><button onclick="mv(-1)">‹</button><div class="dt"><strong style="text-transform:capitalize">${nm}</strong></div><button onclick="mv(1)">›</button></div>
+ <div class="row" style="margin-top:10px"><input type="month" value="${mon}" onchange="mon=this.value||mon;render()"></div>
+ <label class="ck" style="margin-top:10px"><input type="checkbox" ${S.noJ?"checked":""} onchange="S.noJ=this.checked;save();render()">Falta justificada não conta na %</label></div>
+ <div class="g"><div><b>${st.days}</b><span>dias com chamada</span></div><div><b>${S.students.length}</b><span>alunos</span></div><div><b>${st.ntc}</b><span>dias sem treino</span></div></div>`;
+ if(!S.students.length||!st.days)h+=`<div class="card empty">Sem chamadas registradas neste mês.</div>`;
+ else st.rows.forEach(r=>{h+=`<div class="card"><div class="row"><b class="nm sp">${esc(r.s.name)}</b><span class="pct">${r.pc.toString().replace(".",",")}%</span></div>
+  <div class="bar"><i style="width:${r.pc}%"></i></div>
+  <div class="nums"><span>Presenças: <b>${r.p}</b></span><span>Faltas: <b>${r.f}</b></span><span>Justificadas: <b>${r.j}</b></span><span>de <b>${r.p+r.f+r.j}</b> chamadas</span></div></div>`});
+ return h}
+function mv(n){const[y,m]=mon.split("-").map(Number);const d=new Date(y,m-1+n,1);mon=iso(d).slice(0,7);render()}
+function vAlunos(){
+ let h=`<div class="card"><p class="lbl">Novo aluno</p><div class="row"><input type="text" id="nn" placeholder="Nome do aluno" onkeydown="if(event.key==='Enter')addS()"><button class="btn red" onclick="addS()">Adicionar</button></div>
+ <p class="leg">Dica: cole vários nomes separados por vírgula.</p></div><div class="card"><p class="lbl">Alunos (${S.students.length})</p>`;
+ if(!S.students.length)h+=`<div class="empty">Nenhum aluno cadastrado.</div>`;
+ S.students.forEach(s=>{h+=pend===s.id?`<div class="st"><span class="nm">Remover ${esc(s.name)}?</span><button class="btn red sm" onclick="delS('${s.id}')">Sim</button><button class="btn sm" onclick="pend=null;render()">Não</button></div>`:`<div class="st"><span class="nm">${esc(s.name)}</span><button class="x" title="Remover" onclick="pend='${s.id}';render()">🗑</button></div>`});
+ return h+`</div>`}
+function addS(){const el=$("#nn");const names=el.value.split(",").map(x=>x.trim()).filter(Boolean);if(!names.length)return;
+ names.forEach(n=>S.students.push({id:"s"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),name:n}));
+ S.students.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR"));save();toast(names.length+" adicionado(s)");render();setTimeout(()=>{const e=$("#nn");e&&e.focus()},30)}
+function delS(id){pend=null;
+ S.students=S.students.filter(x=>x.id!==id);Object.keys(S.rec).forEach(k=>{delete S.rec[k][id];if(!Object.keys(S.rec[k]).length)delete S.rec[k]});save();toast("Aluno removido");render()}
+function render(){$("#v").innerHTML=tab==="c"?vChamada():tab==="r"?vResumo():vAlunos();
+ document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===tab))}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{tab=b.dataset.t;pend=null;if(tab==="d")S.adm=null;render()});
+const SB_CFG=!SUPABASE_URL.includes("COLE_AQUI")&&!SUPABASE_KEY.includes("COLE_AQUI");
+const SB_OK=SB_CFG&&!!window.supabase;
+let sb,user=null;
+async function run(p){const r=await p;if(r.error){toast("Erro: "+r.error.message);await load()}return r}
+async function fetchAll(t){let out=[],i=0;for(;;){const r=await sb.from(t).select("*").range(i,i+999);if(r.error)return r;out=out.concat(r.data);if(r.data.length<1000)break;i+=1000}return{data:out}}
+async function load(){const[a,p,n]=await Promise.all([fetchAll("alunos"),fetchAll("presencas"),fetchAll("sem_treino")]);
+ if(a.error||p.error||n.error){toast("Erro ao carregar dados");return}
+ S.students=a.data.map(x=>({id:x.id,name:x.nome})).sort((x,y)=>x.name.localeCompare(y.name,"pt-BR"));
+ S.rec={};p.data.forEach(r=>{(S.rec[r.data]=S.rec[r.data]||{})[r.aluno_id]=r.status});
+ S.nt={};n.data.forEach(r=>S.nt[r.data]=1);render()}
+async function toggleNT(kind){const ds=range(kind),all=ds.every(x=>S.nt[x]);
+ ds.forEach(x=>{if(all)delete S.nt[x];else S.nt[x]=1});
+ toast(all?"Treino restaurado":"Marcado: sem treino ("+{d:"dia",w:"semana",m:"mês"}[kind]+")");render();
+ await run(all?sb.from("sem_treino").delete().in("data",ds):sb.from("sem_treino").upsert(ds.map(data=>({data}))))}
+async function setS(id,v){const r=S.rec[day]=S.rec[day]||{};const rm=r[id]===v;
+ if(rm)delete r[id];else r[id]=v;if(!Object.keys(r).length)delete S.rec[day];render();
+ await run(rm?sb.from("presencas").delete().match({aluno_id:id,data:day}):sb.from("presencas").upsert({aluno_id:id,data:day,status:v}))}
+async function allP(){const r=S.rec[day]=S.rec[day]||{};S.students.forEach(s=>r[s.id]="P");render();
+ await run(sb.from("presencas").upsert(S.students.map(s=>({aluno_id:s.id,data:day,status:"P"}))))}
+async function addS(){const el=$("#nn");const names=el.value.split(",").map(x=>x.trim()).filter(Boolean);if(!names.length)return;el.value="";
+ const r=await run(sb.from("alunos").insert(names.map(nome=>({nome}))));
+ if(!r.error){toast(names.length+" adicionado(s)");await load()}
+ setTimeout(()=>{const e=$("#nn");e&&e.focus()},30)}
+async function delS(id){pend=null;S.students=S.students.filter(x=>x.id!==id);
+ Object.keys(S.rec).forEach(k=>{delete S.rec[k][id];if(!Object.keys(S.rec[k]).length)delete S.rec[k]});
+ render();toast("Aluno removido");await run(sb.from("alunos").delete().eq("id",id))}
+function msg(t,ok){const e=$("#msg");if(e){e.style.color=ok?"var(--ok)":"var(--red2)";e.textContent=t}}
+function erro(e){const m=(e.message||"").toLowerCase();
+ if(m.includes("invalid login"))return"E-mail ou senha incorretos.";
+ if(m.includes("not confirmed"))return"Confirme seu e-mail pelo link que foi enviado antes de entrar.";
+ if(m.includes("not allowed")||m.includes("disabled"))return"O cadastro está desativado no Supabase (Authentication > Sign In / Providers > Email > Allow new users to sign up).";
+ if(m.includes("already registered"))return"Esse e-mail já tem conta. Toque em “Já tenho conta”.";
+ if(m.includes("rate limit"))return"Muitos e-mails enviados. Espere um pouco e tente de novo.";
+ if(m.includes("password"))return"Senha inválida: use pelo menos 6 caracteres.";
+ if(m.includes("failed to fetch"))return"Sem conexão com o Supabase. Verifique a internet e a URL no arquivo.";
+ return"Erro: "+e.message}
+async function login(){msg("Entrando...",1);
+ const{error}=await sb.auth.signInWithPassword({email:$("#em").value.trim(),password:$("#pw").value});
+ if(error)msg(erro(error),0)}
+async function signup(){const email=$("#em").value.trim(),pw=$("#pw").value;
+ if(!email||pw.length<6){msg("Preencha o e-mail e uma senha de pelo menos 6 caracteres.",0);return}
+ msg("Criando conta...",1);
+ const{data,error}=await sb.auth.signUp({email,password:pw});
+ if(error){msg(erro(error),0);return}
+ if(data.user&&data.user.identities&&!data.user.identities.length){msg("Esse e-mail já tem conta. Toque em “Já tenho conta”.",0);return}
+ if(!data.session)msg("Conta criada! Enviamos um e-mail de confirmação: abra o link e depois volte, toque em “Já tenho conta” e entre.",1)}
+async function logout(){await sb.auth.signOut()}
+let su=false;
+function vLogin(){const f=su?"signup()":"login()";return `<div class="card"><p class="lbl">${su?"Criar conta":"Entrar"}</p><div class="row" style="flex-direction:column;align-items:stretch"><input type="text" id="em" placeholder="E-mail" autocomplete="username" inputmode="email"><input type="password" id="pw" placeholder="Senha${su?" (mín. 6 caracteres)":""}" autocomplete="${su?"new-password":"current-password"}" onkeydown="if(event.key==='Enter')${f}"><button class="btn red" onclick="${f}">${su?"Criar conta":"Entrar"}</button><button class="btn sm" onclick="su=!su;render()">${su?"Já tenho conta":"Criar conta nova"}</button></div><p id="msg" class="leg" style="font-size:14px;margin:10px 0 0;line-height:1.4"></p></div>`}
+let pendT=null;
+function applyTurma(){S.students=S.all.filter(x=>x.turma===S.turma);S.nt=S.ntT[S.turma]=S.ntT[S.turma]||{}}
+function setT(id){S.turma=id;save();pend=null;applyTurma();render()}
+async function load(){const[t,a,p,n]=await Promise.all([fetchAll("turmas"),fetchAll("alunos"),fetchAll("presencas"),fetchAll("sem_treino")]);
+ if(t.error||a.error||p.error||n.error){S.err="Não foi possível carregar os dados. Rode o arquivo supabase-setup.sql atualizado no SQL Editor do Supabase e recarregue.";render();return}
+ S.err=null;
+ S.turmas=t.data.map(x=>({id:x.id,name:x.nome,t:x.created_at||""})).sort((x,y)=>x.t<y.t?-1:1);
+ S.all=a.data.map(x=>({id:x.id,name:x.nome,turma:x.turma_id})).sort((x,y)=>x.name.localeCompare(y.name,"pt-BR"));
+ S.rec={};p.data.forEach(r=>{(S.rec[r.data]=S.rec[r.data]||{})[r.aluno_id]=r.status});
+ S.ntT={};n.data.forEach(r=>{(S.ntT[r.turma_id]=S.ntT[r.turma_id]||{})[r.data]=1});
+ if(!S.turmas.some(x=>x.id===S.turma))S.turma=S.turmas.length?S.turmas[0].id:null;
+ try{const ad=await sb.rpc("eh_admin");S.admin=!ad.error&&ad.data===true}catch(e){S.admin=false}
+ applyTurma();save();render()}
+async function toggleNT(kind){const ds=range(kind),all=ds.every(x=>S.nt[x]);
+ ds.forEach(x=>{if(all)delete S.nt[x];else S.nt[x]=1});
+ toast(all?"Treino restaurado":"Marcado: sem treino ("+{d:"dia",w:"semana",m:"mês"}[kind]+")");render();
+ await run(all?sb.from("sem_treino").delete().eq("turma_id",S.turma).in("data",ds):sb.from("sem_treino").upsert(ds.map(data=>({turma_id:S.turma,data}))))}
+async function addS(){const el=$("#nn");const names=el.value.split(",").map(x=>x.trim()).filter(Boolean);if(!names.length||!S.turma)return;el.value="";
+ const r=await run(sb.from("alunos").insert(names.map(nome=>({nome,turma_id:S.turma}))));
+ if(!r.error){toast(names.length+" adicionado(s)");await load()}
+ setTimeout(()=>{const e=$("#nn");e&&e.focus()},30)}
+async function delS(id){pend=null;S.all=S.all.filter(x=>x.id!==id);
+ Object.keys(S.rec).forEach(k=>{delete S.rec[k][id];if(!Object.keys(S.rec[k]).length)delete S.rec[k]});
+ applyTurma();render();toast("Aluno removido");await run(sb.from("alunos").delete().eq("id",id))}
+async function addT(){const el=$("#tn");const n=el.value.trim();if(!n)return;el.value="";
+ const r=await run(sb.from("turmas").insert({nome:n}).select());
+ if(!r.error){if(r.data&&r.data[0])S.turma=r.data[0].id;toast("Turma criada");await load()}}
+async function renT(id){const v=$("#tr_"+id).value.trim();if(!v)return;
+ await run(sb.from("turmas").update({nome:v}).eq("id",id));toast("Nome salvo");await load()}
+async function delT(id){pendT=null;await run(sb.from("turmas").delete().eq("id",id));toast("Turma removida");await load()}
+function vTurmas(){let h=`<div class="card"><p class="lbl">Nova turma</p><div class="row"><input type="text" id="tn" placeholder="Ex.: Manhã, Tarde, Noite" onkeydown="if(event.key==='Enter')addT()"><button class="btn red" onclick="addT()">Criar</button></div></div><div class="card"><p class="lbl">Turmas (${S.turmas.length})</p>`;
+ if(!S.turmas.length)h+=`<div class="empty">Nenhuma turma ainda.</div>`;
+ S.turmas.forEach(t=>{const n=S.all.filter(x=>x.turma===t.id).length;
+  h+=pendT===t.id?`<div class="st"><span class="nm">Remover ${esc(t.name)} e seus ${n} aluno(s)?</span><button class="btn red sm" onclick="delT('${t.id}')">Sim</button><button class="btn sm" onclick="pendT=null;render()">Não</button></div>`
+  :`<div class="st"><input type="text" id="tr_${t.id}" value="${esc(t.name)}" onchange="renT('${t.id}')"><span class="leg" style="margin:0;white-space:nowrap">${n} aluno(s)</span><button class="x" title="Remover" onclick="pendT='${t.id}';render()">🗑</button></div>`});
+ return h+`<p class="leg">Para renomear, edite o nome e toque fora do campo.</p></div>`}
+async function loadAdm(){const r=await sb.rpc("listar_usuarios");S.adm=r.error?{err:r.error.message}:{rows:r.data||[]};render()}
+function vAdmin(){
+ if(!S.adm){loadAdm();return`<div class="card empty">Carregando usuários...</div>`}
+ if(S.adm.err)return`<div class="card"><b>Não foi possível listar os usuários</b><p class="leg" style="font-size:14px">${esc(S.adm.err)}<br>Rode o arquivo supabase-admin.sql no Supabase (com o seu e-mail).</p></div>`;
+ const f=d=>d?new Date(d).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"}):"nunca";
+ let h=`<div class="card row"><span class="nm sp">Usuários do site (${S.adm.rows.length})</span><button class="btn sm" onclick="S.adm=null;render()">Atualizar</button></div>`;
+ S.adm.rows.forEach(u=>{h+=`<div class="card"><b class="nm" style="display:block">${esc(u.email||"(sem e-mail)")}</b><div class="nums"><span>Criado: <b>${f(u.criado_em)}</b></span><span>Último login: <b>${f(u.ultimo_login)}</b></span><span>${u.confirmado?"✔ e-mail confirmado":"⏳ aguardando confirmação"}</span></div></div>`});
+ return h+`<p class="leg">Senhas não podem ser vistas: o Supabase as guarda criptografadas.</p>`}
+const _va=vAlunos;
+vAlunos=function(){return _va()+`<div class="card row"><span class="nm sp" style="color:var(--mut);font-size:13px">${esc(user?user.email:"")}</span><button class="btn sm" onclick="logout()">Sair</button></div>`};
+function render(){const tb=document.querySelector(".tabs"),v=$("#v");
+ if(SB_CFG&&!SB_OK){tb.style.display="none";v.innerHTML=`<div class="card"><b>Não consegui carregar o Supabase</b><p class="leg" style="font-size:14px">Os dados de conexão estão preenchidos, mas a biblioteca do Supabase não carregou. Verifique a internet, desative bloqueadores de anúncio/rastreio e recarregue a página.</p></div>`;return}
+ if(!SB_OK){tb.style.display="none";v.innerHTML=`<div class="card"><b>Falta configurar o banco</b><p class="leg" style="font-size:14px">Preencha <code>SUPABASE_URL</code> e <code>SUPABASE_KEY</code> no começo do script do <code>index.html</code>.</p></div>`;return}
+ if(!user){tb.style.display="none";v.innerHTML=vLogin();return}
+ tb.style.display="";
+ if(tab==="d"&&!S.admin)tab="c";
+ tb.querySelector('[data-t="d"]').style.display=S.admin?"":"none";
+ document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===tab));
+ if(S.err){v.innerHTML=`<div class="card"><b>Erro</b><p class="leg" style="font-size:14px">${esc(S.err)}</p></div>`;return}
+ if(!S.turmas.length&&tab!=="t"&&tab!=="d"){v.innerHTML=`<div class="card empty">Crie sua primeira turma (por exemplo: Manhã, Tarde, Noite).<br><br><button class="btn red" onclick="tab='t';render()">Criar turma</button></div>`;return}
+ const bar=(tab==="t"||tab==="d")?"":`<div class="chips">${S.turmas.map(t=>`<button class="btn sm ${t.id===S.turma?"on":""}" onclick="setT('${t.id}')">${esc(t.name)}</button>`).join("")}</div>`;
+ v.innerHTML=bar+(tab==="c"?vChamada():tab==="r"?vResumo():tab==="a"?vAlunos():tab==="d"?vAdmin():vTurmas())}
+if(SB_OK){sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+ sb.auth.onAuthStateChange((ev,se)=>{const u=se?se.user:null;if(u&&user&&u.id===user.id)return;user=u;if(user)load();else render()})}
+render();
+</script></body></html>
